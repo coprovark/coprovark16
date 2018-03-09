@@ -1,15 +1,35 @@
 @extends('layouts.main')
-@section('title','Page Title')
+
+@section('title', 'Page Title')
 
 @section('content')
 
-    <p>This is my body content.</p>
-    User:Jutamatm Gunkam<br>
-    CO Provark16<br>
-    <h1>page1</h1>
-<form action="/page" method="post">
-    <input type="radio" name="radio" value="10">10
-    <input type="radio" name="radio" value="20">20
-<input type="sutmit" value="คำสั่ง"
+page1
+
+
+<form action="/page" method="post" >
+
+    <input type="text" name="name" >
+
+    <input type="hidden" name="hidden" value="1001">
+
+    <input type="radio" name="radio" value="M"> ชาย 
+    <input type="radio" name="radio" value="F"> หญิง 
+
+    <br>
+    <input type="submit" value="ส่งค่า">
+    
 </form>
+
+<h2>แสดงค่า</h2>
+ชื่อ = {{ $NAME }}<br>
+รหัส = {{ $ID }}<br>
+เพศ = {{ $GEN }}
+
+
+
+
+
+
+
 @endsection
