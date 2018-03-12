@@ -73,13 +73,16 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="form_lonin"><i class="fa fa-table fa-fw"></i> เข้าสู่ระบบ</a>
+                            <a href="form_login"><i class="fa fa-table fa-fw"></i> เข้าสู่ระบบ</a>
                         </li>
                         
                         <li>
                             <a href="/form_register"><i class="fa fa-table fa-fw"></i> สมัครสมาชิก</a>
                         </li>
                         
+                        <li>
+                            <a href="/list_users"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
+                        </li>
 
                     </ul>
                 </div>
