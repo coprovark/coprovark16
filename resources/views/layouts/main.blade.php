@@ -73,15 +73,15 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="form_login"><i class="fa fa-table fa-fw"></i> เข้าสู่ระบบ</a>
+                            <a href="form_login2"><i class="glyphicon glyphicon-user"></i> เข้าสู่ระบบ</a>
                         </li>
                         
                         <li>
-                            <a href="/form_register"><i class="fa fa-table fa-fw"></i> สมัครสมาชิก</a>
+                            <a href="/form_register"><i class="glyphicon glyphicon-pencil"></i> สมัครสมาชิก</a>
                         </li>
                         
                         <li>
-                            <a href="/list_users"><i class="fa fa-table fa-fw"></i> สมาชิก</a>
+                            <a href="/list_users"><i class="glyphicon glyphicon-list-alt"></i> สมาชิก</a>
                         </li>
 
                     </ul>
