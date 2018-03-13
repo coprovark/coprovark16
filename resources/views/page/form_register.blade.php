@@ -4,62 +4,32 @@
 
 <h1 class="page-header">ลงทะเบียน</h1>
 
-<form>
-   
-
-    <div>  
-        <lable>
-            <select id="Title" class="Title" data-live-search="true" title="Please select">
-                    <option>นาย</option>
-                    <option>นาง</option>
-                    <option>นางสาว</option>
-            </select>
-        </lable>
-        <label>ชื่อ-สกุล<input type="name" class="form-control" id="exampleInputName" placeholder="ชื่อ"></label>
-        <label><input type="lastname" class="form-control" id="exampleInputLastName" placeholder="นามสกุล"></label>
+<form action="/form_register_save" method="post">
+     <div>
+            <label>ID</label> 
+            <input type="text" name="id" class="form-control"  placeholder="ID">   
     </div>
 
-    <div >
-            <label>เพศ</label>
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">ชาย
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">หญิง
-        
-    </div>
-          
-    <div>  
-      <label>เบอร์โทร</label>
-      <input type="namber" class="form-control" id="exampleInputNumber" placeholder="Number">
-    </div>    
-        
-    <div> 
-          <label>ที่อยู่ </label><br>
-          <textarea name="address" id="address" cols="28" rows="3"placeholder="address"></textarea>
-    </div> 
-
 
     <div>  
-            <label>Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail" placeholder="e-mail">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control"  placeholder="Username">
     </div>
 
     <div>
       <label >Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+      <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
     </div>
-    
-    <div>
-            <label>Repassword</label> 
-            <input type="repassword" class="form-control" id="exampleInputRepassword1" placeholder="Repassword">   
+    <div>  
+        <lable>
+            <select id="Title" name="status" class="Title" data-live-search="true" title="Please select">
+                    <option value="1">admin</option>
+                    <option value="2">ceo</option>
+                    
+            </select>
+        </lable>
     </div>
-
-    <div>
-      <label for="exampleInputFile">File input</label>
-      <input type="file" id="exampleInputFile">
-    </div>
-
-    <div>
-        <label><input type="checkbox"> ยืนยัน</label>
-    </div>
+ 
 
     <button type="submit" class="btn btn-success">ลงทะเบียน</button>
     <button type="reset" class="btn btn-default">Reset</button>
