@@ -35,7 +35,7 @@
         <td><div class="btn-group"><P Align=center>
         <div class="btn-group">
   <button class="btn btn-primary" onclick="return _confirm('{{ $item->id }}')" type="button" >ลบ</button>
-
+  <a href="/list_users_edit/{{ $item->id }}" class="btn btn-info">แก้ไข</a>
         </td>
     </tr>
     @endforeach

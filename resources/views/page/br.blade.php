@@ -1,96 +1,52 @@
 @extends('layouts.main')
 @section('content')
 
-
 <h1 class="page-header">ลงทะเบียน</h1>
 
-
 <form action="/form_register_save" method="post">
-    
-    
-    <div class="radio">
-        
-        <b> ประเภทผู้ใช้งาน : 
-        
-        
-         <label>   <input type="radio" name="users_id" id="1" value="1" checked>
-             นักเรียน
-        </label>
-    
-        <label>
-            <input type="radio" name="users_id" id="2" value="2">
-            นักศึกษา
-        </label>
-    
-        <label>
-            <input type="radio" name="users_id" id="3" value="3" >
-            ครู/อาจารย์
-        </label>
-        
+     <div>
+            <label>รหัสนักศึกษา</label> 
+            <input type="text" name="id" class="form-control"  placeholder="ID">   
     </div>
-    <div class="form-group">
-            <label>รหัสนักศึกษา : </label> 
-            <label><input type="int" name="User_code" class="form-control"  placeholder="รหัสนักศึกษา"></label>    
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label>เลขที่บัตรประจำตัวประชาชน : </label> 
-            <label><input type="int" name="User_idcode" class="form-control"  placeholder="เลขที่บัตรประจำตัวประชาชน"></label>    
-    </div>
-    <div class="form-group">
-            <label>ชื่อ-นามสกุล : </label> 
-            <label><input type="varchar" name="User_fullname" class="form-control"  placeholder="รหัสนักศึกษา"></label>    
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label>ชื่อเล่น : </label> 
-            <label><input type="varchar" name="User_name" class="form-control"  placeholder="เลขที่บัตรประจำตัวประชาชน"></label>    
-    </div>
-    <div class="form-group">
-        <label>สาขา :</lable> 
-        <label>
-            <select id="Title" name="major_code" class="form-control input-sm" data-live-search="true" title="Please select">
-                    <option value="1">มัลติมีเดียและแอนิเมชันเทคโนโลยี</option>
-                    <option value="2">วิศวกรรมซอฟต์แวร์</option>
-                    <option value="3">วิทยาการคอมพิวเตอร์</option>      
+    <div>  
+        <br>
+            <select id="Title" name="titleName" class="Title" data-live-search="true" title="Please select">
+                    <option value="นาย">นาย</option>
+                    <option value="นาย">นางสาว</option>
+                    <option value="นาย">นาง</option>
             </select>
-        </lable>
-    </div> 
-    <div class="form-group"> 
-        <label>คณะ :</lable> 
-        <label>
-            <select id="Title" name="faculty_code" class="form-control input-sm"  title="Please select">
-                    <option value="1">วิทยาการคอมพิวเตอร์</option>
-                    <option value="2">เทคโนโลยีอุตสาหกรรม</option>
-                    <option value="3">ครุศาสตร์</option>      
-            </select>
-        </lable>
     </div>
-    
-    <div class="form-group">
-            <label>ชั้นปี : </label> 
-            <label><input type="varchar" name="level_di" class="form-control"  placeholder="ชั้นปี"></label>    
-            &nbsp;&nbsp;&nbsp;
-            <label>เกรดเฉลี่ย : </label> 
-            <label><input type="varchar" name="copro_grade" class="form-control"  placeholder="เกรดเฉลี่ย"></label>
-            <label>สถาบัน : </label> 
-            <label><input type="varchar" name="institution_code" class="form-control"  placeholder="สถาบัน"></label>
-    </div> 
-    <div class="radio">
-        
-        <b> ประเภทนักศึกษา : 
-        
-        <label>
-            <input type="radio" name="userstype_id" id="1" value="1" checked>ปกติ
-        </label>
-    
-        <label>
-            <input type="radio" name="userstype_id" id="2" value="2">กศ.บป
-        </label>
-    
-        <label>
-            <input type="radio" name="userstype_id" id="3" value="3" >กศ.อศ
-        </label>
-    </div>  
-        <div class="mtm mbs _2_68">
-        <label>วันเกิด : </label>
-        <span class="_5k_4" data-type="selectors" data-name="copro_Bdate" id="u_0_11">
+
+    <div>  
+            <label>ชื่อ</label>
+            <input type="text" name="fullName" class="form-control"  placeholder="Name">
+    </div>
+    <div>
+            <label class="radio-inline">
+                <input type="radio" name="gender" id="inlineRadio1" value="1"> ชาย
+            </label>
+            <label class="radio-inline">
+                 <input type="radio" name="gender" id="inlineRadio2" value="2"> หญิง
+            </label>
+            <label class="radio-inline">
+                 <input type="radio" name="gender" id="inlineRadio2" value="3"> เพศทางเลือก
+            </label>
+</div>
+    <div>
+      <label >Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+    </div>
+    <div>  
+        <br>
+            <select id="Title" name="status" class="Title" data-live-search="true" title="Please select">
+                    <option value="1">admin</option>
+                    <option value="2">ceo</option>
+                    
+            </select>
+            <div class="_58mq _5dbb" id="u_0_10">
+    <div class="mtm mbs _2_68">วันเกิด</div>
+    <div class="_5k_5">
+        <span class="_5k_4" data-type="selectors" data-name="brithDay" id="u_0_11">
          <span>
             <select aria-label="&#xe27;&#xe31;&#xe19;" name="brithDay_day" id="day" title="&#xe27;&#xe31;&#xe19;" class="_5dba">
                 <option value="0">วัน</option>
@@ -260,57 +216,17 @@
             </select>
         </span>
         </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <label>อายุ : </label>
-      <label><input type="varchar" name="copro_Age" class="form-control"  placeholder="อายุ"></label> 
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b> Learning Style : 
+    </div>
+</div>   
         
-        <label>
-            <input type="radio" name="copro_learn" id="1" value="1" checked>V
-        </label>
-    
-        <label>
-            <input type="radio" name="copro_learn" id="2" value="2">A
-        </label>
-    
-        <label>
-            <input type="radio" name="copro_learn" id="3" value="3" >R
-        </label>
-
-         <label>
-            <input type="radio" name="copro_learn" id="3" value="4" >K
-        </label>
-
-         <label>
-            <input type="radio" name="copro_learn" id="3" value="5" >Model
-        </label>
     </div>
-    
-
-
+ 
     <div>  
-            <label>Username</label>
-            <input type="text" name="username" class="form-control"  placeholder="Username">
-    </div>
-    <div>
-      <label >Password</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
-    </div>
-    <div>  
-        <lable>
-            <select id="Title" name="status" class="Title" data-live-search="true" title="Please select">
-                    <option value="1">admin</option>
-                    <option value="2">ceo</option>
-                    
-            </select>
-        </lable>
-    </div>
-
+        <lable><br>
     <button type="submit" class="btn btn-success">ลงทะเบียน</button>
     <button type="reset" class="btn btn-default">Reset</button>
+    </lable>
 </form>
 
-
-
 @endsection
+
