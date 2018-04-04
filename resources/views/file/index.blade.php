@@ -70,7 +70,7 @@
     <div >
     <div class="col-md-8 col-md-offset-1" style="background-color:#eeeeee;">
 
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                  <th></th>

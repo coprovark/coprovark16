@@ -17,9 +17,6 @@ class FileController extends Controller
             'i' => 1
         ]);
     }
-
-
-
     public function dl(Request $req){
         // return response()->download('upload/'.$req->path);
         return response()->download('upload/'.$req->path,$req->name);
@@ -65,7 +62,6 @@ class FileController extends Controller
             echo "upload success";
             return redirect('upload1');     
         }else{
-
             DB::table('file')
                     ->where('ID', $req->ID)
                     ->update([
@@ -73,8 +69,6 @@ class FileController extends Controller
                     ]);
             return redirect('upload1'); 
         }
-
-
     }
     
     public function upload(Request $req){

@@ -136,3 +136,25 @@ Route::get('/ed/{ID}','FileController@ed');
 Route::post('/update123','FileController@update123');
 Route::post('/upload_find','FileController@upload_find');
 Route::post('/upload_find','FileController@Search');//ค้นหา
+
+
+Route::get('/index','CarController@show');
+Route::post('/index','CarController@upload');//upload
+Route::get('/dl/{path}/{name}','CarController@dl');//download
+Route::get('/rm/{ID}','CarController@rm');//ddelete
+//29-3-2018
+Route::get('/ed/{ID}','CarController@ed');
+Route::post('/index123','CarController@update123');
+Route::post('/index','CarController@upload_find');
+Route::post('/index','CarController@Search');//ค้นหา
+
+Route::post('/login','CarController@ShowLogin');
+
+Route::get('/login', function () {
+    $data = ["nameUser"=>"",'passwordUser'=>""];
+    return view('Usedcar.login',$data);
+});
+Route::get('/profile', function () {
+    $data = ["nameUser"=>"",'passwordUser'=>""];
+    return view('Usedcar.profile',$data);
+});
